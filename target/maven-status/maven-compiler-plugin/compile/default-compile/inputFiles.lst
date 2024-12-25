@@ -1,0 +1,15 @@
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\controller\UserController.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\service\UserService.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\service\DBInitialData.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\rest\RoleRestController.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\rest\UserRestController.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\CrudServiceApplication.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\security\SuccessUserHandler.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\service\RoleService.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\repository\UserRepository.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\repository\RoleRepository.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\controller\AdminController.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\model\User.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\service\UserDetailsServiceImpl.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\security\SecurityConfig.java
+C:\Users\Aleksey\Desktop\java\crud-service\src\main\java\com\alexey\crud\model\Role.java
