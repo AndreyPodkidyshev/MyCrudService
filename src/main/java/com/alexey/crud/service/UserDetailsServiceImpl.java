@@ -2,6 +2,7 @@ package com.alexey.crud.service;
 
 import com.alexey.crud.model.User;
 import com.alexey.crud.model.Role;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -16,17 +17,10 @@ import java.util.List;
 import java.util.Set;
 
 @Service
+@RequiredArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserService userService;
-    private final RoleService roleService;
-
-    @Autowired
-    public UserDetailsServiceImpl(UserService userService, RoleService roleService) {
-        this.userService = userService;
-        this.roleService = roleService;
-    }
-
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
@@ -40,8 +34,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         for (Role role : userRoles) {
             roles.add(new SimpleGrantedAuthority(role.getRoleName()));
         }
-        List<GrantedAuthority> grantedAuthorities = new ArrayList<>(roles);
-        return grantedAuthorities;
+        return new ArrayList<>(roles);
     }
 
     private UserDetails buildUserForAuthentication(User user, List<GrantedAuthority> authorities) {

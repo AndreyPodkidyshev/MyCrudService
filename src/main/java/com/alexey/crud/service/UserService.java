@@ -4,6 +4,7 @@ import com.alexey.crud.model.Role;
 import com.alexey.crud.model.User;
 import com.alexey.crud.repository.RoleRepository;
 import com.alexey.crud.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,16 +15,14 @@ import java.util.HashSet;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    @Autowired
-    private RoleRepository roleRepository;
+    private final RoleRepository roleRepository;
 
-    @Autowired
-    private EntityManager em;
+    private final EntityManager em;
 
     @Transactional
     public User getUserByEmail(String email) {
