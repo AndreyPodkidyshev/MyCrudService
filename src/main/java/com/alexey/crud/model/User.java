@@ -46,7 +46,7 @@ public class User implements Serializable {
 
     @ManyToMany(cascade = {CascadeType.MERGE}, fetch = FetchType.LAZY)
     @JoinTable(name = "users_roles")
-    private Set<Role> roles = new HashSet<Role>();
+    private Set<Role> roles = new HashSet<>();
 
     public User(String firstName, String lastName, byte age, String email, String password,
                 Set<Role> roles) {

@@ -1,5 +1,6 @@
-package com.alexey.crud.security;
+package com.alexey.crud.config;
 
+import com.alexey.crud.security.SuccessUserHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +15,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
     private final UserDetailsService userDetailsService;
     private final SuccessUserHandler successUserHandler;
 
@@ -58,7 +60,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .csrf().disable();
     }
-
 
     @Bean
     public static NoOpPasswordEncoder passwordEncoder() {
