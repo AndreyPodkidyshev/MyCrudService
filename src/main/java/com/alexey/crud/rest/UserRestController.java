@@ -52,7 +52,6 @@ public class UserRestController {
             userService.save(user);
             return new ResponseEntity<>(user, HttpStatus.OK);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
             return new ResponseEntity<>(user, HttpStatus.BAD_REQUEST);
         }
     }
